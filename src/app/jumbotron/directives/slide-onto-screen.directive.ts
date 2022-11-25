@@ -5,6 +5,13 @@ import * as d3 from 'd3';
   selector: '[slideOntoScreen]',
 })
 export class SlideOntoScreenDirective {
+  @Input()
+  isContinuous: boolean;
+  /**
+   * Length of animation
+   */
+  @Input()
+  duration: number;
   /**
    * The x value that the svg element will slide to
    */
@@ -20,8 +27,14 @@ export class SlideOntoScreenDirective {
     this.moveIntoPlace();
   }
   moveIntoPlace() {
-    const move = this.hostElement.transition('move').duration(3000);
+    const move = this.hostElement.transition('move').duration(this.duration);
     console.log();
     move.attr('x', this.stopLocation);
+    if (this.isContinuous) {
+      move.on('end', () => {
+        this.hostElement.attr('x', -700);
+        this.moveIntoPlace();
+      });
+    }
   }
 }
