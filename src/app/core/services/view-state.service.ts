@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-type VisibleComponent =
+export type VisibleComponent =
   | 'jumbotron'
   | 'aboutCard'
   | 'credentialsCard'
