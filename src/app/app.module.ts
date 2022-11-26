@@ -12,7 +12,6 @@ import { ParkComponent } from './jumbotron/park/park.component';
 import { CloudComponent } from './jumbotron/cloud/cloud.component';
 import { MainComponent } from './main/main.component';
 import { MainCardComponent } from './main/main-card/main-card.component';
-import { MaximizeCardDirective } from './core/directives/maximize-card.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +24,6 @@ import { MaximizeCardDirective } from './core/directives/maximize-card.directive
     CloudComponent,
     MainComponent,
     MainCardComponent,
-    MaximizeCardDirective,
   ],
   imports: [MatCardModule, BrowserModule, BrowserAnimationsModule],
   providers: [],
