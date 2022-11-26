@@ -1,5 +1,9 @@
 <milldrew-jumbotron
-  *ngIf="viewStateService.visibleComponents.includes('jumbotron')"
+  [ngStyle]="{
+    opacity: viewStateService.visibleComponents.includes('jumbotron')
+      ? '100'
+      : '0'
+  }"
 >
 </milldrew-jumbotron>
 <milldrew-main> </milldrew-main>
