@@ -7,7 +7,7 @@
   position: relative;
   top: -23vw;
 
-  @include responsive.for-size(MediumMin) {
+  @include responsive.for-size(SmallMin) {
     grid-template-columns: 1fr 1fr;
   }
   @include responsive.for-size(XLarge) {

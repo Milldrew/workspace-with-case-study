@@ -59,7 +59,7 @@ body {
     bottom: 20px;
   }
 
-  @include responsive.for-size(MediumMin) {
+  @include responsive.for-size(SmallMin) {
     width: 40vw;
   }
   @include responsive.for-size(XLarge) {
