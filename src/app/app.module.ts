@@ -9,6 +9,7 @@ import { SignComponent } from './jumbotron/sign/sign.component';
 import { BicycleComponent } from './jumbotron/bicycle/bicycle.component';
 import { ParkComponent } from './jumbotron/park/park.component';
 import { CloudComponent } from './jumbotron/cloud/cloud.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CloudComponent } from './jumbotron/cloud/cloud.component';
     SignComponent,
     BicycleComponent,
     ParkComponent,
-    CloudComponent
+    CloudComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
