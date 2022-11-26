@@ -1,20 +1,24 @@
 <milldrew-main-card
   cardTitle="About"
   *ngIf="viewStateService.visibleComponents.includes('aboutCard')"
+  (click)="handleSelectedCardView('aboutCard')"
 >
 </milldrew-main-card>
 <milldrew-main-card
   cardTitle="Credentials"
   *ngIf="viewStateService.visibleComponents.includes('credentialsCard')"
+  (click)="handleSelectedCardView('credentialsCard')"
 >
 </milldrew-main-card>
 <milldrew-main-card
   cardTitle="Studies"
   *ngIf="viewStateService.visibleComponents.includes('studiesCard')"
+  (click)="handleSelectedCardView('studiesCard')"
 >
 </milldrew-main-card>
 <milldrew-main-card
   cardTitle="Contact"
   *ngIf="viewStateService.visibleComponents.includes('contactCard')"
+  (click)="handleSelectedCardView('contactCard')"
 >
 </milldrew-main-card>
