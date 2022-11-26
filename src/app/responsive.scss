@@ -23,5 +23,9 @@
     @media (min-width: 960px) {
       @content;
     }
+  } @else if $size == SmallMin {
+    @media (min-width: 600px) {
+      @content;
+    }
   }
 }
