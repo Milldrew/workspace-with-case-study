@@ -62,7 +62,7 @@ body {
   @include responsive.for-size(SmallMin) {
     width: 40vw;
   }
-  @include responsive.for-size(XLarge) {
+  @include responsive.for-size(LargeMin) {
     width: 20vw;
   }
 }
