@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ViewStateService } from '../core/services/view-state.service';
 
 @Component({
@@ -6,8 +6,6 @@ import { ViewStateService } from '../core/services/view-state.service';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
 })
-export class MainComponent implements OnInit {
+export class MainComponent {
   constructor(public viewStateService: ViewStateService) {}
-
-  ngOnInit(): void {}
 }
