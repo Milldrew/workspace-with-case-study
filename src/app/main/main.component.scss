@@ -10,7 +10,7 @@
   @include responsive.for-size(SmallMin) {
     grid-template-columns: 1fr 1fr;
   }
-  @include responsive.for-size(XLarge) {
+  @include responsive.for-size(LargeMin) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
