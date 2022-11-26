@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ViewStateService } from './core/services/view-state.service';
 
 @Component({
   selector: 'milldrew-root',
@@ -6,4 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  constructor(public viewStateService: ViewStateService) {}
 }
