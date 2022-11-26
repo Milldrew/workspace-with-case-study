@@ -10,5 +10,16 @@ export class MainCardComponent {
   cardTitle = 'Title';
   @Input()
   imgSrc = 'https://material.angular.io/assets/img/examples/shiba2.jpg';
+  isActive = false;
   constructor() {}
+
+  handleCardClick() {
+    this.isActive = true;
+  }
+  handleMouseOver() {
+    this.isActive = true;
+  }
+  handleMouseOut() {
+    this.isActive = false;
+  }
 }

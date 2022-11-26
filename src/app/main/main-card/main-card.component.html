@@ -1,4 +1,9 @@
-<mat-card class="milldrew-main-mat-card">
+<mat-card
+  (mouseover)="handleMouseOver()"
+  (mouseout)="handleMouseOut()"
+  [class.mat-elevation-z8]="isActive"
+  class="milldrew-main-mat-card"
+>
   <img mat-card-image [src]="imgSrc" />
   <mat-card-header>
     <mat-card-title class="main-card-title">{{ cardTitle }}</mat-card-title>
