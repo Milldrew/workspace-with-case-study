@@ -1,5 +1,6 @@
 import * as d3 from 'd3';
 import { Input, Directive } from '@angular/core';
+import { ViewStateService } from '../services/view-state.service';
 
 @Directive({
   selector: '[maximizeCard]',
@@ -12,6 +13,7 @@ export class MaximizeCardDirective {
   originalSize: string;
   cardSelection: d3.Selection<d3.BaseType, unknown, HTMLElement, any>;
   parentSVGWidth: string;
+  constructor(public viewStateService: ViewStateService) {}
 
   ngAfterViewInit() {
     this.cardSelection = d3.select('#' + this.cardId);
@@ -53,7 +55,10 @@ export class MaximizeCardDirective {
     minimize.ease(d3.easeLinear);
     minimize.style('width', this.originalSize);
     minimize.on('end.minimize', () => {
-      this.isMaximixed = true;
+      this.isMaximixed = false;
+      this.cardSelection.attr('style', null);
+      this.viewStateService.visibleComponents =
+        this.viewStateService.allComponents;
     });
   }
 }
