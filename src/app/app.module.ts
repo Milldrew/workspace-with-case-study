@@ -1,3 +1,4 @@
+import { MatCardModule } from '@angular/material/card';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,6 +11,7 @@ import { BicycleComponent } from './jumbotron/bicycle/bicycle.component';
 import { ParkComponent } from './jumbotron/park/park.component';
 import { CloudComponent } from './jumbotron/cloud/cloud.component';
 import { MainComponent } from './main/main.component';
+import { MainCardComponent } from './main/main-card/main-card.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +22,11 @@ import { MainComponent } from './main/main.component';
     BicycleComponent,
     ParkComponent,
     CloudComponent,
-    MainComponent
+    MainComponent,
+    MainCardComponent,
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule
-  ],
+  imports: [MatCardModule, BrowserModule, BrowserAnimationsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
