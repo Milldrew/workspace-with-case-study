@@ -1,3 +1,4 @@
+@use "../responsive.scss" as responsive;
 :host {
   display: grid;
   grid-template-columns: 1fr;
@@ -5,4 +6,11 @@
   background-color: pink;
   position: relative;
   top: -23vw;
+
+  @include responsive.for-size(MediumMin) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include responsive.for-size(XLarge) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
