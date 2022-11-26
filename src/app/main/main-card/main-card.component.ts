@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'milldrew-main-card',
   templateUrl: './main-card.component.html',
-  styleUrls: ['./main-card.component.scss']
+  styleUrls: ['./main-card.component.scss'],
 })
-export class MainCardComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class MainCardComponent {
+  @Input()
+  cardTitle = 'Title';
+  constructor() {}
 }
