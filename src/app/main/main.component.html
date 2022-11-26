@@ -1,4 +1,19 @@
-<milldrew-main-card cardTitle="About" *ng> </milldrew-main-card>
-<milldrew-main-card cardTitle="Credentials"> </milldrew-main-card>
-<milldrew-main-card cardTitle="Studies"> </milldrew-main-card>
-<milldrew-main-card cardTitle="Contact"> </milldrew-main-card>
+<milldrew-main-card
+  cardTitle="About"
+  *ngIf="viewStateService.visibleComponents.includes('aboutCard')"
+>
+</milldrew-main-card>
+<milldrew-main-card
+  cardTitle="Credentials"
+  *ngIf="viewStateService.visibleComponents.includes('credentialsCard')"
+>
+</milldrew-main-card>
+<milldrew-main-card
+  cardTitle="Studies"
+  *ngIf="viewStateService.visibleComponents.includes('studiesCard')"
+>
+</milldrew-main-card>
+<milldrew-main-card cardTitle="Contact"
+
+  *ngIf="viewStateService.visibleComponents.includes('contactCard')"
+  > </milldrew-main-card>
